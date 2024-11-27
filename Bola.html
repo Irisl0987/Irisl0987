@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bola Perseguindo o Mouse</title>
+    <style>
+        #bola {
+            width: 30px;
+            height: 30px;
+            background: blue;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="bola"></div>
+    
+    <script>
+        const bola = document.getElementById("bola");
+
+        document.addEventListener("mousemove", (e) => {
+            bola.style.left = e.pageX + "px";
+            bola.style.top = e.pageY + "px";
+        });
+    </script>
+</body>
+</html>
